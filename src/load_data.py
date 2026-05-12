@@ -22,4 +22,4 @@ if __name__ == "__main__":
     print_summary(df)
     print("\nDenial records:")
     denials = filter_denials(df)
-    print(denials[['claim_id', 'payer', 'carc', 'rarc', 'denied_amount']].to_string(index=False))
+    print(denials[['claim_id', 'payer', 'group_code', 'carc', 'rarc', 'denied_amount']].to_string(index=False))
