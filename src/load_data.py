@@ -11,7 +11,11 @@ def print_summary(df):
     print(f"Unique CARC codes: {[int(c) for c in df['carc'].unique()]}")
 
 def filter_denials(df):
-    return df[df['denied_amount'] > 0].copy()
+    adjustment_codes = ['CO', 'PR', 'OA', 'PI']
+    return df[
+        (df['denied_amount'] > 0) | 
+        (df['group_code'].isin(adjustment_codes))
+    ].copy()
 
 if __name__ == "__main__":
     df = load_era_data("data/sample_era.csv")
