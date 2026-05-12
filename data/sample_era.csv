@@ -1,0 +1,16 @@
+claim_id,payer,patient_id,service_code,group_code,carc,rarc,denied_amount,service_date,short_description
+1001,Cigna,MOCK001,99213,CO,16,MA130,120.50,2026-04-01,Missing information
+1002,Aetna,MOCK002,99214,CO,50,N20,75.00,2026-04-04,Service not medically necessary
+1003,UHC,MOCK003,99213,PR,1,N4,35.00,2026-04-05,Deductible amount
+1004,Cigna,MOCK004,99215,CO,97,M15,200.00,2026-04-07,Service bundled
+1005,Aetna,MOCK005,99212,CO,4,N130,50.00,2026-04-08,Service inconsistent with modifier
+1006,UHC,MOCK006,99214,CO,16,MA61,95.00,2026-04-09,Missing information
+1007,Cigna,MOCK007,99213,CO,50,N20,110.00,2026-04-10,Service not medically necessary
+1008,Aetna,MOCK008,99215,PR,1,N4,60.00,2026-04-11,Deductible amount
+1009,UHC,MOCK009,99213,CO,96,N180,80.00,2026-04-12,Non-covered charge
+1010,Cigna,MOCK010,99214,CO,16,MA130,145.00,2026-04-14,Missing information
+1011,Aetna,MOCK011,99213,CO,50,N20,90.00,2026-04-15,Service not medically necessary
+1012,UHC,MOCK012,99215,CO,4,N130,175.00,2026-04-16,Service inconsistent with modifier
+1013,Cigna,MOCK013,99212,PR,1,N4,25.00,2026-04-17,Deductible amount
+1014,Aetna,MOCK014,99214,CO,97,M15,130.00,2026-04-18,Service bundled
+1015,UHC,MOCK015,99213,CO,16,MA61,115.00,2026-04-19,Missing information
