@@ -8,7 +8,7 @@ def print_summary(df):
     print(f"Total records: {len(df)}")
     print(f"Total denied amount: ${df['denied_amount'].sum():.2f}")
     print(f"Unique payers: {list(df['payer'].unique())}")
-    print(f"Unique CARC codes: {[int(c) for c in df['carc'].unique()]}")
+    print(f"Unique CARC codes: {[int(c) for c in df['carc'].dropna().unique()]}")
 
 def filter_denials(df):
     adjustment_codes = ['CO', 'PR', 'OA', 'PI']
