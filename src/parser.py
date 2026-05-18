@@ -18,6 +18,7 @@ def extract_denials(df):
 
 if __name__ == "__main__":
     files = ["sample_era.csv", "sample_era_messy.csv"]
+    all_denials = []
 
     for filename in files:
         filepath = f"data/{filename}"
@@ -29,3 +30,8 @@ if __name__ == "__main__":
         output_path = f"outputs/denials_extracted_{filename}"
         denials.to_csv(output_path, index=False)
         print(f"Extracted {len(denials)} denials from {filename} → {output_path}")
+        all_denials.append(denials)
+
+    combined = pd.concat(all_denials, ignore_index=True)
+    combined.to_csv("outputs/denials_extracted.csv", index=False)
+    print(f"Combined output → outputs/denials_extracted.csv ({len(combined)} total rows)")
