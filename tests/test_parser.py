@@ -1,10 +1,12 @@
 import pandas as pd
 import sys
 import os
+import json
+import tempfile
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from src.parser_json import normalize_code, extract_denials
+from src.parser_json import normalize_code, normalize_optional, extract_denials, load_file
 
 # --- normalize_code tests ---
 
@@ -26,6 +28,17 @@ def test_normalize_code_normal_value():
 def test_normalize_code_already_clean():
     assert normalize_code("CO") == "CO"
 
+# --- normalize_optional tests ---
+
+def test_normalize_optional_missing():
+    assert normalize_optional(None) == ""
+
+def test_normalize_optional_strips_whitespace():
+    assert normalize_optional("  25  ") == "25"
+
+def test_normalize_optional_normal():
+    assert normalize_optional("25") == "25"
+
 # --- extract_denials tests ---
 
 def test_extract_denials_filters_zero_amount():
@@ -35,7 +48,8 @@ def test_extract_denials_filters_zero_amount():
         'denied_amount': [100.0, 0.0, 50.0],
         'carc': ['16', '50', '1'],
         'rarc': ['MA130', 'N20', 'N4'],
-        'group_code': ['CO', 'CO', 'PR']
+        'group_code': ['CO', 'CO', 'PR'],
+        'modifier': ['25', '', ''],
     })
     result = extract_denials(df)
     assert len(result) == 2
@@ -48,12 +62,14 @@ def test_extract_denials_normalizes_codes():
         'denied_amount': [100.0],
         'carc': [' 16 '],
         'rarc': ['ma130'],
-        'group_code': [' co ']
+        'group_code': [' co '],
+        'modifier': ['  25  '],
     })
     result = extract_denials(df)
     assert result.iloc[0]['carc'] == '16'
     assert result.iloc[0]['rarc'] == 'MA130'
     assert result.iloc[0]['group_code'] == 'CO'
+    assert result.iloc[0]['modifier'] == '25'
 
 def test_extract_denials_handles_missing_carc():
     df = pd.DataFrame({
@@ -62,7 +78,8 @@ def test_extract_denials_handles_missing_carc():
         'denied_amount': [100.0],
         'carc': [None],
         'rarc': ['MA130'],
-        'group_code': ['CO']
+        'group_code': ['CO'],
+        'modifier': [''],
     })
     result = extract_denials(df)
     assert result.iloc[0]['carc'] == 'UNKNOWN'
@@ -74,10 +91,24 @@ def test_extract_denials_handles_missing_rarc():
         'denied_amount': [100.0],
         'carc': ['16'],
         'rarc': [None],
-        'group_code': ['CO']
+        'group_code': ['CO'],
+        'modifier': [''],
     })
     result = extract_denials(df)
     assert result.iloc[0]['rarc'] == 'UNKNOWN'
+
+def test_extract_denials_tracks_source_file():
+    df = pd.DataFrame({
+        'claim_id': [1],
+        'payer': ['Cigna'],
+        'denied_amount': [100.0],
+        'carc': ['16'],
+        'rarc': ['MA130'],
+        'group_code': ['CO'],
+        'modifier': ['25'],
+    })
+    result = extract_denials(df, source_file="test_file.csv")
+    assert result.iloc[0]['source_file'] == 'test_file.csv'
 
 def test_extract_denials_no_hardcoded_indexes():
     df = pd.DataFrame({
@@ -86,7 +117,8 @@ def test_extract_denials_no_hardcoded_indexes():
         'denied_amount': [0.0, 100.0, 75.0],
         'carc': ['16', '50', '1'],
         'rarc': ['MA130', 'N20', 'N4'],
-        'group_code': ['CO', 'CO', 'PR']
+        'group_code': ['CO', 'CO', 'PR'],
+        'modifier': ['', '25', ''],
     })
     result = extract_denials(df)
     assert len(result) == 2
@@ -94,12 +126,55 @@ def test_extract_denials_no_hardcoded_indexes():
 
 def test_extract_denials_works_on_clean_file():
     df = pd.read_csv('data/sample_era.csv')
-    result = extract_denials(df)
+    result = extract_denials(df, source_file='sample_era.csv')
     assert len(result) == 20
     assert result['carc'].str.contains('UNKNOWN').sum() == 0
+    assert (result['source_file'] == 'sample_era.csv').all()
 
 def test_extract_denials_works_on_messy_file():
     df = pd.read_csv('data/sample_era_messy.csv')
-    result = extract_denials(df)
+    result = extract_denials(df, source_file='sample_era_messy.csv')
     assert len(result) == 10
     assert (result['group_code'] == result['group_code'].str.upper()).all()
+
+# --- load_file tests ---
+
+def test_load_file_csv():
+    df = load_file('data/sample_era.csv')
+    assert len(df) == 20
+    assert 'claim_id' in df.columns
+
+def test_load_file_json():
+    data = [
+        {
+            "claim_id": 3001,
+            "payer": "Cigna",
+            "patient_id": "MOCK201",
+            "patient_control_number": "PAT-SYN-201",
+            "service_line_id": 1,
+            "service_code": "99213",
+            "procedure_code": "99213",
+            "modifier": "25",
+            "group_code": "CO",
+            "carc": 16,
+            "rarc": "MA130",
+            "denied_amount": 120.50,
+            "service_date": "2026-06-01",
+            "short_description": "Missing information"
+        }
+    ]
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.json',
+                                     delete=False) as f:
+        json.dump(data, f)
+        tmp_path = f.name
+    df = load_file(tmp_path)
+    os.unlink(tmp_path)
+    assert len(df) == 1
+    assert df.iloc[0]['claim_id'] == 3001
+
+def test_load_file_unsupported():
+    try:
+        load_file('data/file.txt')
+        assert False
+    except ValueError as e:
+        assert 'Unsupported file type' in str(e)

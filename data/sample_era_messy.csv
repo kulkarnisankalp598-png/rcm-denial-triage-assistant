@@ -1,11 +1,11 @@
-claim_id,payer,patient_id,service_code,group_code,carc,rarc,denied_amount,service_date,short_description
-2001,Cigna,MOCK101,99213, co ,16,ma130,120.50,2026-05-01,Missing information
-2002,Aetna,MOCK102,99214,CO,50, n20 ,75.00,2026-05-02,Service not medically necessary
-2003,UHC,MOCK103,99213,pr,,N4,35.00,2026-05-03,Missing CARC test
-2004,Cigna,MOCK104,99215,CO,97,,200.00,2026-05-04,Missing RARC test
-2005,Aetna,MOCK105,99212, CO,  4  ,n130,50.00,2026-05-05,Extra whitespace test
-2006,UHC,MOCK106,99214, co,16,MA61,95.00,2026-05-06,Lowercase group code
-2007,Cigna,MOCK107,99213,CO, 50 ,n20,110.00,2026-05-07,Spaces around CARC
-2008,Aetna,MOCK108,99215,pr,1,n4,60.00,2026-05-08,Lowercase RARC
-2009,UHC,MOCK109,99213,CO,,n180,80.00,2026-05-09,Missing CARC
-2010,Cigna,MOCK110,99214, CO ,16,ma130,145.00,2026-05-10,Spaces around group code
+claim_id,payer,patient_id,patient_control_number,service_line_id,service_code,procedure_code,modifier,group_code,carc,rarc,denied_amount,service_date,short_description
+2001,Cigna,MOCK101,PAT-SYN-101,1,99213,99213,25, co ,16,ma130,120.50,2026-05-01,Missing information
+2002,Aetna,MOCK102,PAT-SYN-102,1,99214,99214,, CO,50, n20 ,75.00,2026-05-02,Service not medically necessary
+2003,UHC,MOCK103,PAT-SYN-103,1,99213,99213,,pr,,N4,35.00,2026-05-03,Missing CARC test
+2004,Cigna,MOCK104,PAT-SYN-104,1,99215,99215,25,CO,97,,200.00,2026-05-04,Missing RARC test
+2005,Aetna,MOCK105,PAT-SYN-105,1,99212,99212,, CO,  4  ,n130,50.00,2026-05-05,Extra whitespace test
+2006,UHC,MOCK106,PAT-SYN-106,1,99214,99214,, co,16,MA61,95.00,2026-05-06,Lowercase group code
+2007,Cigna,MOCK107,PAT-SYN-107,1,99213,99213,25,CO, 50 ,n20,110.00,2026-05-07,Spaces around CARC
+2008,Aetna,MOCK108,PAT-SYN-108,1,99215,99215,,pr,1,n4,60.00,2026-05-08,Lowercase RARC
+2009,UHC,MOCK109,PAT-SYN-109,1,99213,99213,,CO,,n180,80.00,2026-05-09,Missing CARC
+2010,Cigna,MOCK110,PAT-SYN-110,1,99214,99214,25, CO ,16,ma130,145.00,2026-05-10,Spaces around group code
