@@ -24,6 +24,21 @@ retrieves payer policy context, and generates AI-powered explanations for billin
 ## Week 2 Progress Video
 https://www.youtube.com/watch?v=wHO7rAVMAzw
 
+## Week 3 Progress
+- Wrote full domain brief covering ERA, 835, CLP, CAS, SVC, LQ, DTM, NM1, CARC, RARC, group codes, claim-level vs service-line denials, and PHI
+- Added architecture diagram to README showing full data flow from input to dashboard
+- Upgraded project from 8-week basic track to 10-week advanced track
+- Created new src modules: parser_x12.py, models.py, code_lookup.py, rules_engine.py, evaluator.py, app_cli.py, app_streamlit.py
+- Created docs/ folder with domain_brief.md, architecture.md, schema.json, prompt_template.md
+- Created data/policies/ folder for payer policy documents
+- Updated parser_json.py to support both CSV and JSON input
+- Added source_file tracking, procedure_code, modifier, and patient_control_number fields to parser and sample data
+- Built src/code_lookup.py with complete official CARC and RARC definitions sourced from x12.org
+- 40/40 pytest tests passing across all test files
+
+## Week 3 Progress Video
+https://www.youtube.com/watch?v=VQud7EHCjYo
+
 ## Architechture
 
 ```
