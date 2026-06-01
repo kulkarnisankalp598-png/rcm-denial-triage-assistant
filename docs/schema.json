@@ -1,25 +1,171 @@
 {
-  "claim_id": "string",
-  "service_line_id": "string or null",
-  "payer": "string",
-  "patient_control_number": "string",
-  "group_code": "CO | PR | OA | PI | CR",
-  "carc": "string",
-  "rarc": "string or null",
-  "denied_amount": "float",
-  "procedure_code": "string",
-  "modifier": "string or null",
-  "service_date": "YYYY-MM-DD",
-  "source_file": "string",
-  "carc_meaning": "string",
-  "rarc_meaning": "string or null",
-  "denial_summary": "string",
-  "likely_cause": "string",
-  "retrieved_policy_source": "string or null",
-  "retrieved_policy_snippet": "string or null",
-  "rule_based_action": "string",
-  "llm_recommended_action": "string",
-  "confidence": "high | medium | low",
-  "needs_human_review": "boolean",
-  "reason_if_uncertain": "string or null"
+  "description": "Represents a normalized claim-level denial record.",
+  "properties": {
+    "claim_id": {
+      "title": "Claim Id",
+      "type": "string"
+    },
+    "payer": {
+      "title": "Payer",
+      "type": "string"
+    },
+    "patient_control_number": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Patient Control Number"
+    },
+    "service_date": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Service Date"
+    },
+    "source_file": {
+      "title": "Source File",
+      "type": "string"
+    },
+    "billed_amount": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Billed Amount"
+    },
+    "paid_amount": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Paid Amount"
+    },
+    "denied_amount": {
+      "title": "Denied Amount",
+      "type": "number"
+    },
+    "group_code": {
+      "title": "Group Code",
+      "type": "string"
+    },
+    "carc": {
+      "title": "Carc",
+      "type": "string"
+    },
+    "rarc": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Rarc"
+    },
+    "carc_meaning": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Carc Meaning"
+    },
+    "rarc_meaning": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Rarc Meaning"
+    },
+    "procedure_code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Procedure Code"
+    },
+    "modifier": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Modifier"
+    },
+    "payer_icn": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Payer Icn"
+    },
+    "claim_status": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "",
+      "title": "Claim Status"
+    }
+  },
+  "required": [
+    "claim_id",
+    "payer",
+    "source_file",
+    "denied_amount",
+    "group_code",
+    "carc"
+  ],
+  "title": "Claim",
+  "type": "object"
 }
