@@ -38,6 +38,26 @@ https://www.youtube.com/watch?v=wHO7rAVMAzw
 
 ## Week 3 Progress Video
 https://www.youtube.com/watch?v=VQud7EHCjYo
+## Week 4 Progress
+- Created synthetic X12 835 EDI file with 10 claims (`data/synthetic_835_001.edi`)
+- Built `parser_x12.py` that splits segments by tilde and fields by asterisk
+- Extracts CLP, CAS, SVC, DTM, NM1, and LQ segments into normalized denial rows
+- Code meanings looked up automatically from code_lookup module during parsing
+- Malformed segments handled gracefully with try/except and warning logs
+- Runs via `py -m src.parser_x12 data/synthetic_835_001.edi outputs/normalized.json`
+- 24 pytest tests covering claim-level and service-line denials — all passing
+
+## Week 4 & 5 Progress Video
+https://www.youtube.com/watch?v=QudOqRV2MJA&feature=youtu.be
+
+## Week 5 Progress
+- Built `src/models.py` with six Pydantic models: Claim, Adjustment, ServiceLine, DenialFinding, PolicyEvidence, ActionPlan
+- Claim model validates group_code, denied_amount, service_date, carc, payer, claim_id, and source_file
+- Invalid rows return clear logged errors instead of raw stack traces
+- Built `validate_denial_row` and `validate_all_denials` utility functions
+- Auto-exported Claim model as JSON schema to `docs/schema.json`
+- 29 pytest tests covering valid and invalid fixtures — all passing
+- 93/93 total tests passing across all test files
 
 ## Architechture
 
