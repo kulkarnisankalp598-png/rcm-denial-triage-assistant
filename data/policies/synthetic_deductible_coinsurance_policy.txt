@@ -1,0 +1,20 @@
+SYNTHETIC PAYER A — CLAIMS PROCESSING POLICY
+Policy Name: Patient Responsibility — Deductible and Coinsurance Policy
+Topic: Deductible / Patient Responsibility
+Effective Date: 2026-01-01
+Payer: SyntheticPayerA
+
+SECTION 1 — OVERVIEW
+Adjustments under CARC 1 represent the patient's annual deductible amount. The deductible is the amount the patient must pay out of pocket before the plan begins to pay for covered services. These amounts are the patient's responsibility and should be billed to the patient directly under group code PR.
+
+SECTION 2 — DEDUCTIBLE AMOUNTS
+The deductible adjustment represents the portion of the claim applied to the patient's annual deductible. Once the patient's deductible is met for the plan year, subsequent claims will be processed at the applicable coinsurance or copayment level. CARC 1 denials are not provider write-offs — the provider may collect this amount from the patient.
+
+SECTION 3 — COINSURANCE
+CARC 2 represents the patient's coinsurance amount. Coinsurance is the percentage of the allowed amount the patient owes after the deductible has been met. Both CARC 1 and CARC 2 adjustments are patient responsibility and must be billed to the patient under group code PR.
+
+SECTION 4 — PRIOR INSURANCE EOB REQUIREMENT
+When a patient has primary insurance through another carrier, the secondary payer requires a copy of the primary payer's Explanation of Benefits (EOB) before processing the claim. Missing or incomplete EOB information will result in a RARC N4 denial. Submit the primary EOB with the secondary claim to resolve this denial.
+
+SECTION 5 — BILLING THE PATIENT
+Providers may collect CARC 1 and CARC 2 amounts directly from the patient. These amounts represent the patient's legal financial responsibility under their benefit plan. Do not write off deductible or coinsurance amounts unless required by a specific contractual agreement or hardship policy.

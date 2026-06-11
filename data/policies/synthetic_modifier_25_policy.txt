@@ -1,0 +1,20 @@
+SYNTHETIC PAYER A — CLAIMS PROCESSING POLICY
+Policy Name: Modifier 25 Billing Policy
+Topic: Modifier 25 / Evaluation and Management / Inconsistent Modifier
+Effective Date: 2026-01-01
+Payer: SyntheticPayerA
+
+SECTION 1 — OVERVIEW
+Modifier 25 indicates that a significant, separately identifiable evaluation and management (E/M) service was performed by the same physician on the same day as a procedure or other service. This modifier may only be appended to E/M codes and requires specific documentation to support payment. Claims where the procedure code is inconsistent with the modifier used will be denied under CARC 4.
+
+SECTION 2 — WHEN TO USE MODIFIER 25
+Modifier 25 is appropriate when the E/M service was above and beyond the usual pre- and post-operative care associated with the procedure, the E/M service addressed a separate condition or a new problem unrelated to the procedure, and the clinical situation required a separately identifiable evaluation beyond what is typically included in the procedure. An inconsistent modifier occurs when the modifier appended does not match the procedure code type or the clinical scenario documented.
+
+SECTION 3 — DOCUMENTATION REQUIREMENTS
+The medical record must clearly document the nature of the presenting problem that required the E/M service, a history, examination, and medical decision-making that supports the level of E/M billed, that the E/M service was distinct and separate from the procedure performed on the same day, and the clinical indication for both the E/M service and the procedure. When CARC 4 is received, the provider must review whether the modifier is consistent with the procedure code billed.
+
+SECTION 4 — COMMON DENIAL REASONS
+Claims will be denied under CARC 4 when the procedure code is inconsistent with the modifier used. Claims billed with modifier 25 will also be denied when the medical record does not support a separate and significant E/M service, the E/M documentation is identical to the procedure note, modifier 25 is appended to a non-E/M procedure code, or the diagnosis codes for the E/M and procedure are identical with no documented distinction.
+
+SECTION 5 — RESUBMISSION AND APPEAL
+To resolve a CARC 4 denial, review whether the modifier appended is appropriate for the procedure code billed. If the modifier is incorrect, resubmit with the correct modifier. To appeal a modifier 25 denial, submit an appeal with the complete medical record for the date of service, include a cover letter explaining the clinical distinction between the E/M and the procedure, and file the appeal within 180 days of the denial remittance date.

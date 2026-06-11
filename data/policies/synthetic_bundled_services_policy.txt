@@ -1,0 +1,32 @@
+SYNTHETIC PAYER A — CLAIMS PROCESSING POLICY
+Policy Name: Bundled Services and Global Period Policy
+Topic: Bundled Services / CARC 97
+Effective Date: 2026-01-01
+Payer: SyntheticPayerA
+
+SECTION 1 — OVERVIEW
+When a service is considered a component of another procedure that has already been adjudicated, payment for the component service is included in the allowance for the primary procedure. These services will be denied under CARC 97 with remark code M15.
+
+SECTION 2 — NATIONAL CORRECT CODING INITIATIVE (NCCI)
+SyntheticPayerA applies National Correct Coding Initiative (NCCI) edits to identify procedure code combinations that should not be billed together. When a code pair is identified as a bundling conflict, the component code will be denied and only the comprehensive code will be paid.
+
+SECTION 3 — GLOBAL SURGICAL PERIOD
+Services rendered during the global surgical period of a procedure are included in the surgical payment and will not be reimbursed separately. The global period includes:
+- Pre-operative visits on the day before and day of surgery
+- Intra-operative services
+- Post-operative visits during the global period (10 or 90 days depending on procedure)
+- Complications that do not require a return to the operating room
+
+SECTION 4 — SEPARATELY BILLABLE SERVICES
+The following services may be billed separately during the global period with appropriate modifier and documentation:
+- Treatment of unrelated conditions
+- Staged procedures with modifier 58
+- Unplanned return to the operating room with modifier 78
+- Distinct procedural services with modifier 59 or X modifiers
+
+SECTION 5 — APPEAL PROCESS
+To appeal a CARC 97 denial:
+1. Verify the procedure code combination against current NCCI edits
+2. If the services are distinct, resubmit with modifier 59 or appropriate X modifier
+3. Include documentation supporting the medical necessity of each service as separate and distinct
+4. Appeals must be filed within 180 days of the denial remittance date

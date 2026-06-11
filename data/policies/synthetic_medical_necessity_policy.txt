@@ -1,0 +1,34 @@
+SYNTHETIC PAYER A — CLAIMS PROCESSING POLICY
+Policy Name: Medical Necessity Review Policy
+Topic: Medical Necessity
+Effective Date: 2026-01-01
+Payer: SyntheticPayerA
+
+SECTION 1 — OVERVIEW
+Services that are not deemed medically necessary by SyntheticPayerA will be denied under CARC 50. Medical necessity is determined based on whether the service is appropriate, reasonable, and necessary for the diagnosis or treatment of a covered condition according to accepted standards of medical practice.
+
+SECTION 2 — CRITERIA FOR MEDICAL NECESSITY
+A service is considered medically necessary when it meets all of the following criteria:
+- It is appropriate for the symptoms, diagnosis, or condition being treated
+- It is provided in the most appropriate setting given the patient's condition
+- It is not primarily for the convenience of the patient or provider
+- It is not experimental, investigational, or unproven
+- It meets the frequency and duration standards established by clinical guidelines
+
+SECTION 3 — DOCUMENTATION REQUIREMENTS
+To support medical necessity, the medical record must contain:
+- A clear diagnosis or clinical indication for the service
+- Documentation of the patient's condition prior to the service
+- The provider's clinical reasoning for ordering or performing the service
+- Any prior treatment attempts and their outcomes
+- Objective findings supporting the need for the service
+
+SECTION 4 — PRIOR AUTHORIZATION
+Certain services require prior authorization before they are rendered. Services performed without required prior authorization will be denied. A list of services requiring prior authorization is available on the SyntheticPayerA provider portal.
+
+SECTION 5 — APPEAL PROCESS
+Providers may appeal a CARC 50 denial by submitting:
+1. A written letter of medical necessity from the treating physician
+2. Relevant clinical notes and diagnostic reports
+3. Applicable clinical guidelines or peer-reviewed literature supporting the service
+Appeals must be filed within 180 days of the denial remittance date.

@@ -1,0 +1,35 @@
+SYNTHETIC PAYER A — CLAIMS PROCESSING POLICY
+Policy Name: Duplicate Claim Policy
+Topic: Duplicate Claims / CARC 18
+Effective Date: 2026-01-01
+Payer: SyntheticPayerA
+
+SECTION 1 — OVERVIEW
+A duplicate claim is defined as a claim submitted for the same patient, same date of service, same procedure code, and same provider that has already been received and adjudicated. Duplicate claims will be denied under CARC 18.
+
+SECTION 2 — COMMON CAUSES OF DUPLICATE CLAIMS
+Duplicate claims most commonly occur when:
+- A provider resubmits a claim believing it was not received when it was already in process
+- A clearinghouse submits the same claim more than once
+- A corrected claim is submitted without the proper frequency code
+- A billing system error results in multiple transmissions of the same claim
+
+SECTION 3 — HOW TO AVOID DUPLICATE CLAIM DENIALS
+To prevent duplicate claim denials:
+- Check claim status through the provider portal or 276/277 transaction before resubmitting
+- Allow sufficient processing time of at least 30 days before following up on unpaid claims
+- Use frequency code 7 for corrected claims and frequency code 8 for void/cancel requests
+- Do not resubmit a claim that shows as received or in process in the claim status system
+
+SECTION 4 — RESUBMISSION GUIDELINES
+If a claim was submitted in error or requires correction:
+- Submit a void (frequency code 8) followed by a new original claim, or
+- Submit a corrected claim (frequency code 7) with the original claim number referenced
+- Do not submit a new original claim for a previously adjudicated service
+
+SECTION 5 — APPEAL PROCESS
+If you believe a duplicate denial was issued in error:
+1. Obtain the original claim number and remittance advice showing prior adjudication
+2. Compare the original and duplicate claim details to identify any differences
+3. If the claims are genuinely different services, submit an appeal with supporting documentation
+4. Appeals must be filed within 180 days of the denial remittance date

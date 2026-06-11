@@ -1,0 +1,32 @@
+SYNTHETIC PAYER A — CLAIMS PROCESSING POLICY
+Policy Name: Missing Information and Incomplete Claims
+Topic: Missing Information / Submission Errors
+Effective Date: 2026-01-01
+Payer: SyntheticPayerA
+
+SECTION 1 — OVERVIEW
+Claims submitted with missing, incomplete, or invalid information will be denied under CARC 16. The provider must correct and resubmit the claim with complete and accurate information. No appeal rights are afforded for unprocessable claims.
+
+SECTION 2 — COMMON REASONS FOR CARC 16 DENIAL
+The following missing or invalid fields are the most common causes of CARC 16 denials:
+- Missing or invalid procedure code
+- Missing or invalid modifier (see RARC MA130)
+- Missing or incomplete diagnosis code
+- Missing rendering provider NPI
+- Missing date of service
+- Missing or invalid place of service code
+- Missing patient date of birth or member ID
+
+SECTION 3 — MODIFIER 25 REQUIREMENTS
+When billing an evaluation and management (E/M) service on the same day as a procedure, modifier 25 must be appended to the E/M code. The medical record must contain separate documentation supporting the E/M service as significant and separately identifiable from the procedure performed on the same day. Failure to include modifier 25 or supporting documentation will result in denial.
+
+SECTION 4 — RESUBMISSION GUIDELINES
+To resolve a CARC 16 denial:
+1. Review the remittance advice remark code (RARC) for the specific missing element.
+2. Correct the identified field in your billing system.
+3. Resubmit the claim as a corrected claim (frequency code 7).
+4. Do not submit as a replacement or void unless previously paid.
+5. Include all required supporting documentation with the resubmission.
+
+SECTION 5 — TIMELY FILING
+Corrected claims must be resubmitted within 180 days of the original remittance advice date. Claims resubmitted after the timely filing limit will be denied regardless of the correction made.
