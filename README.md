@@ -101,3 +101,15 @@ Input (CSV / JSON / 835 EDI)
         evaluator.py
         Parser accuracy, retrieval precision, action usefulness
 ```
+## Week 6 Progress
+- Created 6 synthetic payer policy documents covering missing information, medical necessity, modifier 25/inconsistent modifier, bundled services, duplicate claims, and deductible/coinsurance
+- Built `src/policy_loader.py` to extract and chunk policy text by section heading, attaching payer, topic, effective date, and section metadata to each chunk
+- Loaded 36 total policy chunks across all 6 documents
+- Built `src/retriever.py` using TF-IDF and cosine similarity for keyword-based retrieval
+- Implemented `retrieve_for_denial()` which builds a query automatically from CARC meaning, RARC, and short description
+- Achieved correct top-3 policy retrieval for all 5 tested CARC denial scenarios (16, 50, 97, 1, 4)
+- 20 pytest tests covering policy loading, metadata extraction, and retrieval accuracy
+- 113/113 total tests passing across all test files
+
+## Week 6 Progress Video
+https://www.youtube.com/watch?v=TS-FKLIUfx0
