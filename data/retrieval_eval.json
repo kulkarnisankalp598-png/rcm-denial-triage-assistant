@@ -1,0 +1,182 @@
+[
+  {
+    "case_id": "EVAL001",
+    "claim_id": "CLM10001",
+    "carc": "16",
+    "rarc": "MA130",
+    "carc_meaning": "Claim/service lacks information or has submission/billing error(s).",
+    "short_description": "Missing information",
+    "expected_topic": "Missing Information / Submission Errors"
+  },
+  {
+    "case_id": "EVAL002",
+    "claim_id": "CLM10002",
+    "carc": "50",
+    "rarc": "N20",
+    "carc_meaning": "These are non-covered services because this is not deemed a medical necessity by the payer.",
+    "short_description": "Service not medically necessary",
+    "expected_topic": "Medical Necessity"
+  },
+  {
+    "case_id": "EVAL003",
+    "claim_id": "CLM10004",
+    "carc": "97",
+    "rarc": "M15",
+    "carc_meaning": "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated.",
+    "short_description": "Service bundled",
+    "expected_topic": "Bundled Services / CARC 97"
+  },
+  {
+    "case_id": "EVAL004",
+    "claim_id": "CLM10003",
+    "carc": "1",
+    "rarc": "N4",
+    "carc_meaning": "Deductible Amount.",
+    "short_description": "Deductible amount",
+    "expected_topic": "Deductible / Patient Responsibility"
+  },
+  {
+    "case_id": "EVAL005",
+    "claim_id": "CLM10005",
+    "carc": "4",
+    "rarc": "N130",
+    "carc_meaning": "The procedure code is inconsistent with the modifier used.",
+    "short_description": "Service inconsistent with modifier",
+    "expected_topic": "Modifier 25 / Evaluation and Management / Inconsistent Modifier"
+  },
+  {
+    "case_id": "EVAL006",
+    "claim_id": "CLM10006",
+    "carc": "16",
+    "rarc": "MA61",
+    "carc_meaning": "Claim/service lacks information or has submission/billing error(s).",
+    "short_description": "Missing information",
+    "expected_topic": "Missing Information / Submission Errors"
+  },
+  {
+    "case_id": "EVAL007",
+    "claim_id": "CLM10007",
+    "carc": "50",
+    "rarc": "N20",
+    "carc_meaning": "These are non-covered services because this is not deemed a medical necessity by the payer.",
+    "short_description": "Service not medically necessary",
+    "expected_topic": "Medical Necessity"
+  },
+  {
+    "case_id": "EVAL008",
+    "claim_id": "CLM10008",
+    "carc": "1",
+    "rarc": "N4",
+    "carc_meaning": "Deductible Amount.",
+    "short_description": "Deductible amount",
+    "expected_topic": "Deductible / Patient Responsibility"
+  },
+  {
+    "case_id": "EVAL009",
+    "claim_id": "CLM10009",
+    "carc": "96",
+    "rarc": "N180",
+    "carc_meaning": "Non-covered charge(s).",
+    "short_description": "Non-covered charge",
+    "expected_topic": "Medical Necessity"
+  },
+  {
+    "case_id": "EVAL010",
+    "claim_id": "CLM10010",
+    "carc": "16",
+    "rarc": "MA130",
+    "carc_meaning": "Claim/service lacks information or has submission/billing error(s).",
+    "short_description": "Missing information",
+    "expected_topic": "Missing Information / Submission Errors"
+  },
+  {
+    "case_id": "EVAL011",
+    "claim_id": "1001",
+    "carc": "16",
+    "rarc": "MA130",
+    "carc_meaning": "Claim/service lacks information or has submission/billing error(s).",
+    "short_description": "Missing information",
+    "expected_topic": "Missing Information / Submission Errors"
+  },
+  {
+    "case_id": "EVAL012",
+    "claim_id": "1002",
+    "carc": "50",
+    "rarc": "N20",
+    "carc_meaning": "These are non-covered services because this is not deemed a medical necessity by the payer.",
+    "short_description": "Service not medically necessary",
+    "expected_topic": "Medical Necessity"
+  },
+  {
+    "case_id": "EVAL013",
+    "claim_id": "1004",
+    "carc": "97",
+    "rarc": "M15",
+    "carc_meaning": "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated.",
+    "short_description": "Service bundled",
+    "expected_topic": "Bundled Services / CARC 97"
+  },
+  {
+    "case_id": "EVAL014",
+    "claim_id": "1005",
+    "carc": "4",
+    "rarc": "N130",
+    "carc_meaning": "The procedure code is inconsistent with the modifier used.",
+    "short_description": "Service inconsistent with modifier",
+    "expected_topic": "Modifier 25 / Evaluation and Management / Inconsistent Modifier"
+  },
+  {
+    "case_id": "EVAL015",
+    "claim_id": "1003",
+    "carc": "1",
+    "rarc": "N4",
+    "carc_meaning": "Deductible Amount.",
+    "short_description": "Deductible amount",
+    "expected_topic": "Deductible / Patient Responsibility"
+  },
+  {
+    "case_id": "EVAL016",
+    "claim_id": "1009",
+    "carc": "96",
+    "rarc": "N180",
+    "carc_meaning": "Non-covered charge(s).",
+    "short_description": "Non-covered charge",
+    "expected_topic": "Medical Necessity"
+  },
+  {
+    "case_id": "EVAL017",
+    "claim_id": "1010",
+    "carc": "16",
+    "rarc": "MA130",
+    "carc_meaning": "Claim/service lacks information or has submission/billing error(s).",
+    "short_description": "Missing information",
+    "expected_topic": "Missing Information / Submission Errors"
+  },
+  {
+    "case_id": "EVAL018",
+    "claim_id": "1014",
+    "carc": "97",
+    "rarc": "M15",
+    "carc_meaning": "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated.",
+    "short_description": "Service bundled",
+    "expected_topic": "Bundled Services / CARC 97"
+  },
+  {
+    "case_id": "EVAL019",
+    "claim_id": "1019",
+    "carc": "97",
+    "rarc": "M15",
+    "carc_meaning": "The benefit for this service is included in the payment/allowance for another service/procedure that has already been adjudicated.",
+    "short_description": "Service bundled",
+    "expected_topic": "Bundled Services / CARC 97"
+  },
+  {
+    "case_id": "EVAL020",
+    "claim_id": "1017",
+    "carc": "16",
+    "rarc": "MA130",
+    "carc_meaning": "Claim/service lacks information or has submission/billing error(s).",
+    "short_description": "Missing information",
+    "expected_topic": "Missing Information / Submission Errors"
+  }
+]
