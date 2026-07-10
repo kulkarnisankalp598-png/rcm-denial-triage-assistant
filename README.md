@@ -113,3 +113,14 @@ Input (CSV / JSON / 835 EDI)
 
 ## Week 6 Progress Video
 https://www.youtube.com/watch?v=TS-FKLIUfx0
+
+## Week 7 Progress
+- Created 20-case retrieval evaluation dataset (`data/retrieval_eval.json`) covering all CARC denial types in the sample data
+- Built `src/evaluator.py` with `precision_at_k` scoring and full evaluation pipeline
+- Ran TF-IDF baseline evaluation — 18/20 hits, Precision@3 = 0.90, Verdict: PASS
+- 2 misses on CARC 96 (non-covered charge) — no dedicated policy document exists for this denial type, flagged for Week 8
+- Full evaluation results saved to `outputs/retrieval_eval_results.json`
+- 113/113 tests still passing
+
+## Week 7 Progress Video
+[link coming]
