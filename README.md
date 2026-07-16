@@ -123,4 +123,4 @@ https://www.youtube.com/watch?v=TS-FKLIUfx0
 - 113/113 tests still passing
 
 ## Week 7 Progress Video
-[link coming]
+https://www.youtube.com/watch?v=DwZ5eSBwOrc
