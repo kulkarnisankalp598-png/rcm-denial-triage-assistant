@@ -1,10 +1,12 @@
 # CARC-based denial rules playbook
 # Each rule defines a deterministic recommended action for a specific CARC code
+# Action categories: resubmit, correct_claim, add_documentation, appeal, bill_patient, human_review
 # Source: CMS, X12, and standard RCM billing practices
 
 rules:
   - carc: "16"
     short_name: "Missing Information"
+    action_category: "correct_claim"
     group_codes: ["CO", "PR", "OA"]
     recommended_action: "Review the remittance advice remark code (RARC) to identify the specific missing element. Correct the identified field in your billing system and resubmit as a corrected claim (frequency code 7) within 180 days of the remittance date."
     appeal_eligible: true
@@ -14,6 +16,7 @@ rules:
 
   - carc: "50"
     short_name: "Not Medically Necessary"
+    action_category: "appeal"
     group_codes: ["CO"]
     recommended_action: "Obtain a letter of medical necessity from the treating physician. Gather supporting clinical documentation including diagnosis, prior treatment attempts, and objective findings. Submit an appeal with clinical notes and applicable peer-reviewed guidelines within 180 days."
     appeal_eligible: true
@@ -23,6 +26,7 @@ rules:
 
   - carc: "97"
     short_name: "Service Bundled"
+    action_category: "correct_claim"
     group_codes: ["CO"]
     recommended_action: "Verify the procedure code combination against current NCCI edits. If the services are distinct and separately identifiable, resubmit with modifier 59 or an appropriate X modifier (XE, XS, XP, XU) with supporting documentation. Do not rebill without a modifier if the NCCI edit applies."
     appeal_eligible: true
@@ -32,6 +36,7 @@ rules:
 
   - carc: "1"
     short_name: "Deductible Amount"
+    action_category: "bill_patient"
     group_codes: ["PR"]
     recommended_action: "Bill the patient directly for the deductible amount shown. This is the patient's financial responsibility under their benefit plan. Do not write off the amount unless required by a specific contractual or hardship agreement."
     appeal_eligible: false
@@ -41,6 +46,7 @@ rules:
 
   - carc: "4"
     short_name: "Inconsistent Modifier"
+    action_category: "correct_claim"
     group_codes: ["CO"]
     recommended_action: "Review whether the modifier appended is appropriate for the procedure code billed. If modifier 25 was used, confirm that separate and significant E/M documentation exists in the medical record. Correct the modifier and resubmit, or submit an appeal with the complete medical record for the date of service."
     appeal_eligible: true
@@ -50,6 +56,7 @@ rules:
 
   - carc: "96"
     short_name: "Non-Covered Charge"
+    action_category: "human_review"
     group_codes: ["CO"]
     recommended_action: "Verify that the service is not excluded under the patient's benefit plan. If the service is covered under a different benefit category, recode and resubmit. If the service is truly non-covered, inform the patient and issue an Advance Beneficiary Notice (ABN) for future services of this type. Do not write off without confirming the denial reason."
     appeal_eligible: true
@@ -59,6 +66,7 @@ rules:
 
   - carc: "18"
     short_name: "Duplicate Claim"
+    action_category: "resubmit"
     group_codes: ["CO"]
     recommended_action: "Check claim status in the provider portal before resubmitting. If the original claim is still in process, wait for adjudication. If a correction is needed, submit a corrected claim (frequency code 7) referencing the original claim number, not a new original claim."
     appeal_eligible: false
@@ -68,6 +76,7 @@ rules:
 
   - carc: "29"
     short_name: "Timely Filing"
+    action_category: "appeal"
     group_codes: ["CO"]
     recommended_action: "Gather proof of timely filing — original submission confirmation, clearinghouse reports, or payer acknowledgment. Submit an appeal with the timely filing documentation within the payer's appeal window. If the claim was submitted on time but rejected, include the original submission date and reference number."
     appeal_eligible: true
@@ -77,6 +86,7 @@ rules:
 
   - carc: "45"
     short_name: "Exceeds Fee Schedule"
+    action_category: "correct_claim"
     group_codes: ["CO"]
     recommended_action: "Write off the contractual adjustment — this is the difference between your billed charge and the payer's contracted rate. Do not bill the patient for CO-45 amounts as this violates most payer contracts. Review your fee schedule to ensure charges align with contracted rates."
     appeal_eligible: false
@@ -86,6 +96,7 @@ rules:
 
   - carc: "197"
     short_name: "Missing Authorization"
+    action_category: "add_documentation"
     group_codes: ["CO"]
     recommended_action: "Verify whether prior authorization was required for this service. If authorization was obtained but not included on the claim, resubmit with the authorization number in the appropriate field. If authorization was not obtained, submit a retro-authorization request to the payer and appeal if approved."
     appeal_eligible: true
