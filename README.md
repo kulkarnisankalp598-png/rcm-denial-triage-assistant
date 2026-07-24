@@ -124,3 +124,13 @@ https://www.youtube.com/watch?v=TS-FKLIUfx0
 
 ## Week 7 Progress Video
 https://www.youtube.com/watch?v=DwZ5eSBwOrc
+## Week 8 Progress
+- Created YAML rules playbook (`data/playbooks/carc_rules.yaml`) with 10 CARC denial rules
+- Added 6 formal action categories: resubmit, correct_claim, add_documentation, appeal, bill_patient, human_review
+- Built `src/rules_engine.py` with deterministic rule lookup, action category mapping, and human_review fallback for unknown CARCs
+- CARC 96 (Week 7 retrieval miss) now handled deterministically via human_review action
+- 43 pytest tests including parameterized tests for all 10 CARC codes
+- 156/156 total tests passing
+
+## Week 8 Progress Video
+https://www.youtube.com/watch?v=nydHGqpiTwI
