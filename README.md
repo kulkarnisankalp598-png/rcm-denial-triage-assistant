@@ -134,3 +134,16 @@ https://www.youtube.com/watch?v=DwZ5eSBwOrc
 
 ## Week 8 Progress Video
 https://www.youtube.com/watch?v=nydHGqpiTwI
+## Week 9 Progress
+- Built `src/llm_reasoner.py` integrating the Anthropic Claude API (claude-sonnet-4-6, temperature=0)
+- Designed strict JSON prompt grounding LLM output in normalized denial data, CARC/RARC meanings, retrieved policy evidence, and rules baseline
+- LLM output validated against `ActionPlan` Pydantic schema before use
+- Confidence scoring: high (strong evidence), medium (weak evidence), low (no evidence) with needs_human_review flag
+- Retry logic handles JSON parse failures — up to 2 retries per call
+- Safe human_review fallback returned if API call or validation fails
+- Documented hallucination risk and grounding strategy in `docs/prompt_template.md`
+- 17 pytest tests for prompt building and ActionPlan validation
+- 173/173 total tests passing
+
+## Week 9 Progress Video
+https://www.youtube.com/watch?v=6tn8xH-xR8I
