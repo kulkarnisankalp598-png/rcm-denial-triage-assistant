@@ -147,3 +147,27 @@ https://www.youtube.com/watch?v=nydHGqpiTwI
 
 ## Week 9 Progress Video
 https://www.youtube.com/watch?v=6tn8xH-xR8I
+
+## Week 10 Progress
+- Built `src/app_cli.py` — full pipeline CLI supporting EDI, CSV, and JSON input with `--no-llm` flag
+- Built `src/app_streamlit.py` — interactive dashboard with filters, claim detail view, and export
+- Dashboard filters: payer, denial category, denied amount range, confidence, human review flag
+- Claim detail view shows parsed facts, CARC/RARC meanings, rules action, AI recommendation, policy evidence
+- Export to CSV and JSON from the dashboard
+- Session state fix prevents data reload on dropdown change
+- 173/173 tests still passing
+
+## Week 10 Run Instructions
+```bash
+# CLI (no LLM)
+py -m src.app_cli --input data/synthetic_835_001.edi --output outputs/report.csv --no-llm
+
+# CLI (with LLM)
+py -m src.app_cli --input data/synthetic_835_001.edi --output outputs/report.csv
+
+# Streamlit dashboard
+py -m streamlit run src\app_streamlit.py
+```
+
+## Week 10 Progress Video
+https://www.youtube.com/watch?v=JLkE35mr4Jc
