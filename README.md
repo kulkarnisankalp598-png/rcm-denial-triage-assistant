@@ -171,3 +171,45 @@ py -m streamlit run src\app_streamlit.py
 
 ## Week 10 Progress Video
 https://www.youtube.com/watch?v=JLkE35mr4Jc
+
+## Week 11 Progress
+- Expanded evaluation dataset to 80 labeled synthetic cases
+- Full evaluation report saved to `outputs/evaluation_report.csv`
+- Retrieval evaluation: 70/80 hits, Precision@3 = 0.875, Verdict: PASS
+- Known limitations documented below
+- Future work backlog documented below
+
+## Final Evaluation Results
+
+| Metric | Score |
+|---|---|
+| Total eval cases | 80 |
+| Retrieval hits | 70 |
+| Retrieval misses | 10 |
+| Precision@3 | 0.875 |
+| Passing threshold | 0.75 |
+| Verdict | PASS ✅ |
+
+## Known Limitations
+
+- **Synthetic data only** — all sample data uses mock patient identifiers and fabricated claim numbers. The system has not been tested against real ERA files from production payers.
+- **Limited policy coverage** — only 6 synthetic policy documents are included. Real payer policy libraries contain hundreds of documents. Retrieval quality will degrade for denial types not covered by the current corpus.
+- **LLM confidence is consistently medium** — because all policy documents are synthetic, the LLM correctly flags medium confidence on every output. Real payer policy documents would improve confidence scores.
+- **CARC 96 retrieval gap** — non-covered charge denials retrieve bundled services policy instead of a dedicated non-covered charges document. Handled via human_review fallback in the rules engine.
+- **CARC 45 no policy match** — fee schedule denials return no matching policy chunks. Handled via human_review fallback.
+- **Expert review required** — all LLM recommendations must be reviewed by a qualified billing specialist before action. This tool is a decision support system, not an autonomous billing agent.
+- **No real payer integration** — payer policy documents are synthetic. Real deployment would require licensed payer policy content with retrieval date tracking.
+- **API cost** — LLM reasoning costs approximately $0.01-0.03 per claim at current API pricing. High-volume production use requires cost planning.
+
+## Future Work Backlog
+
+- Add real payer policy documents (Aetna, Cigna, UHC public policy bulletins)
+- Implement embedding-based retrieval (FAISS or ChromaDB) as upgrade from TF-IDF
+- Add raw X12 835 file support with full ANSI parsing
+- Expand rules playbook to cover 50+ CARC codes
+- Build user authentication for the Streamlit dashboard
+- Add appeal letter generation as an LLM output
+- Add a dedicated non-covered charges policy document
+- Integrate with a real ERA ingestion pipeline
+- Add audit logging for all LLM recommendations
+- Add HIPAA-compliant data handling for production deployment
