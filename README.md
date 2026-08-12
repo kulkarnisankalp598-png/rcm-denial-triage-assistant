@@ -213,3 +213,7 @@ https://www.youtube.com/watch?v=JLkE35mr4Jc
 - Integrate with a real ERA ingestion pipeline
 - Add audit logging for all LLM recommendations
 - Add HIPAA-compliant data handling for production deployment
+## Week 11 Demo
+https://www.youtube.com/watch?v=XtRyiYLHS7s
+## Week 11 Technical Deep Dive
+https://www.youtube.com/watch?v=5Igvs7cyCFo
