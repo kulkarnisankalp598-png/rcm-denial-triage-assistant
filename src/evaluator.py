@@ -82,6 +82,8 @@ def run_evaluation(eval_file='data/retrieval_eval.json', top_k=3):
 
 
 if __name__ == "__main__":
+    import pandas as pd
+
     print("\n" + "="*60)
     print("RETRIEVAL EVALUATION — TF-IDF BASELINE")
     print("="*60 + "\n")
@@ -104,8 +106,44 @@ if __name__ == "__main__":
     print(f"Precision@{summary['top_k']}:   {summary['precision_at_k']}")
     print(f"Verdict:        {summary['verdict']}")
 
-    # Save results to outputs
+    # Save full JSON results
     output = {'summary': summary, 'results': results}
     with open('outputs/retrieval_eval_results.json', 'w') as f:
         json.dump(output, f, indent=2)
-    print(f"\nFull results saved to outputs/retrieval_eval_results.json")
+
+    # Save evaluation report as CSV
+    rows = []
+    for r in results:
+        rows.append({
+            'case_id': r['case_id'],
+            'claim_id': r['claim_id'],
+            'carc': r['carc'],
+            'expected_topic': r['expected_topic'],
+            'top_retrieved_topic_1': r['top_retrieved_topics'][0] if len(r['top_retrieved_topics']) > 0 else '',
+            'top_retrieved_topic_2': r['top_retrieved_topics'][1] if len(r['top_retrieved_topics']) > 1 else '',
+            'top_retrieved_topic_3': r['top_retrieved_topics'][2] if len(r['top_retrieved_topics']) > 2 else '',
+            'top_score_1': r['top_scores'][0] if len(r['top_scores']) > 0 else 0,
+            'hit': r['hit'],
+            'result': 'PASS' if r['hit'] else 'FAIL',
+        })
+
+    df = pd.DataFrame(rows)
+
+    # Add summary row
+    summary_row = pd.DataFrame([{
+        'case_id': 'SUMMARY',
+        'claim_id': '',
+        'carc': '',
+        'expected_topic': '',
+        'top_retrieved_topic_1': f"Total: {summary['total_cases']}",
+        'top_retrieved_topic_2': f"Hits: {summary['hits']}",
+        'top_retrieved_topic_3': f"Misses: {summary['misses']}",
+        'top_score_1': summary['precision_at_k'],
+        'hit': '',
+        'result': summary['verdict'],
+    }])
+    df = pd.concat([df, summary_row], ignore_index=True)
+    df.to_csv('outputs/evaluation_report.csv', index=False)
+
+    print(f"\nEvaluation report saved to outputs/evaluation_report.csv")
+    print(f"Full results saved to outputs/retrieval_eval_results.json")

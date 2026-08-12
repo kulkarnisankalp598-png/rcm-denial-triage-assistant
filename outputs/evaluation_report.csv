@@ -1,0 +1,82 @@
+case_id,claim_id,carc,expected_topic,top_retrieved_topic_1,top_retrieved_topic_2,top_retrieved_topic_3,top_score_1,hit,result
+EVAL001,CLM10001,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL002,CLM10002,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3821,True,PASS
+EVAL003,CLM10004,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Duplicate Claims / CARC 18,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.5052,True,PASS
+EVAL004,CLM10003,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL005,CLM10005,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.3771,True,PASS
+EVAL006,CLM10006,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.4075,True,PASS
+EVAL007,CLM10007,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3821,True,PASS
+EVAL008,CLM10008,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL009,CLM10009,96,Medical Necessity,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Missing Information / Submission Errors,0.1092,False,FAIL
+EVAL010,CLM10010,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL011,1001,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL012,1002,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3821,True,PASS
+EVAL013,1004,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Duplicate Claims / CARC 18,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.5052,True,PASS
+EVAL014,1005,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.3771,True,PASS
+EVAL015,1003,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL016,1009,96,Medical Necessity,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Missing Information / Submission Errors,0.1092,False,FAIL
+EVAL017,1010,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL018,1014,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Duplicate Claims / CARC 18,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.5052,True,PASS
+EVAL019,1019,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Duplicate Claims / CARC 18,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.5052,True,PASS
+EVAL020,1017,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL021,SYN001,18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,0.4067,True,PASS
+EVAL022,SYN002,18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,0.4067,True,PASS
+EVAL023,SYN003,29,Duplicate Claims / CARC 18,Missing Information / Submission Errors,Duplicate Claims / CARC 18,,0.3198,True,PASS
+EVAL024,SYN004,29,Duplicate Claims / CARC 18,Missing Information / Submission Errors,Duplicate Claims / CARC 18,,0.3198,True,PASS
+EVAL025,SYN005,45,Bundled Services / CARC 97,,,,0.0,False,FAIL
+EVAL026,SYN006,197,Missing Information / Submission Errors,Medical Necessity,Missing Information / Submission Errors,Missing Information / Submission Errors,0.2964,True,PASS
+EVAL027,SYN007,197,Missing Information / Submission Errors,Medical Necessity,Missing Information / Submission Errors,Missing Information / Submission Errors,0.2728,True,PASS
+EVAL028,SYN008,16,Missing Information / Submission Errors,Duplicate Claims / CARC 18,Missing Information / Submission Errors,Missing Information / Submission Errors,0.187,True,PASS
+EVAL029,SYN009,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3756,True,PASS
+EVAL030,SYN010,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.3608,True,PASS
+EVAL031,SYN011,96,Medical Necessity,Bundled Services / CARC 97,Missing Information / Submission Errors,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.1728,False,FAIL
+EVAL032,SYN012,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.3033,True,PASS
+EVAL033,SYN013,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.4814,True,PASS
+EVAL034,SYN034,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3363,True,PASS
+EVAL035,SYN035,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL036,SYN036,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,Missing Information / Submission Errors,0.2722,True,PASS
+EVAL037,SYN037,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3756,True,PASS
+EVAL038,SYN038,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.4556,True,PASS
+EVAL039,SYN039,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL040,SYN040,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.3634,True,PASS
+EVAL041,SYN041,18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,0.4103,True,PASS
+EVAL042,SYN042,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,Missing Information / Submission Errors,0.2563,True,PASS
+EVAL043,SYN043,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3254,True,PASS
+EVAL044,SYN044,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Duplicate Claims / CARC 18,0.469,True,PASS
+EVAL045,SYN045,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL046,SYN046,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.373,True,PASS
+EVAL047,SYN047,96,Medical Necessity,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Missing Information / Submission Errors,0.1092,False,FAIL
+EVAL048,SYN048,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,Missing Information / Submission Errors,0.2534,True,PASS
+EVAL049,SYN049,29,Duplicate Claims / CARC 18,Missing Information / Submission Errors,Duplicate Claims / CARC 18,,0.2216,True,PASS
+EVAL050,SYN050,197,Missing Information / Submission Errors,Medical Necessity,Bundled Services / CARC 97,Missing Information / Submission Errors,0.2,True,PASS
+EVAL051,SYN051,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3756,True,PASS
+EVAL052,SYN052,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL053,SYN053,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.4556,True,PASS
+EVAL054,SYN054,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL055,SYN055,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.373,True,PASS
+EVAL056,SYN056,96,Medical Necessity,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Missing Information / Submission Errors,0.1092,False,FAIL
+EVAL057,SYN057,18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,0.4103,True,PASS
+EVAL058,SYN058,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,Missing Information / Submission Errors,0.2722,True,PASS
+EVAL059,SYN059,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3408,True,PASS
+EVAL060,SYN060,197,Missing Information / Submission Errors,Missing Information / Submission Errors,Medical Necessity,Missing Information / Submission Errors,0.179,True,PASS
+EVAL061,SYN061,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+EVAL062,SYN062,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3254,True,PASS
+EVAL063,SYN063,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Duplicate Claims / CARC 18,0.469,True,PASS
+EVAL064,SYN064,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL065,SYN065,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.373,True,PASS
+EVAL066,SYN066,96,Medical Necessity,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Missing Information / Submission Errors,0.1092,False,FAIL
+EVAL067,SYN067,29,Duplicate Claims / CARC 18,Missing Information / Submission Errors,Duplicate Claims / CARC 18,,0.3198,True,PASS
+EVAL068,SYN068,45,Bundled Services / CARC 97,,,,0.0,False,FAIL
+EVAL069,SYN069,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,Missing Information / Submission Errors,0.2563,True,PASS
+EVAL070,SYN070,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3254,True,PASS
+EVAL071,SYN071,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Duplicate Claims / CARC 18,0.469,True,PASS
+EVAL072,SYN072,1,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,Deductible / Patient Responsibility,0.2054,True,PASS
+EVAL073,SYN073,4,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.3608,True,PASS
+EVAL074,SYN074,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,Missing Information / Submission Errors,0.2626,True,PASS
+EVAL075,SYN075,18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,Duplicate Claims / CARC 18,0.4103,True,PASS
+EVAL076,SYN076,197,Missing Information / Submission Errors,Medical Necessity,Bundled Services / CARC 97,Medical Necessity,0.3117,False,FAIL
+EVAL077,SYN077,50,Medical Necessity,Medical Necessity,Medical Necessity,Bundled Services / CARC 97,0.3254,True,PASS
+EVAL078,SYN078,96,Medical Necessity,Bundled Services / CARC 97,Missing Information / Submission Errors,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.1728,False,FAIL
+EVAL079,SYN079,97,Bundled Services / CARC 97,Bundled Services / CARC 97,Modifier 25 / Evaluation and Management / Inconsistent Modifier,Modifier 25 / Evaluation and Management / Inconsistent Modifier,0.4704,True,PASS
+EVAL080,SYN080,16,Missing Information / Submission Errors,Missing Information / Submission Errors,Missing Information / Submission Errors,Duplicate Claims / CARC 18,0.3899,True,PASS
+SUMMARY,,,,Total: 80,Hits: 70,Misses: 10,0.875,,PASS
